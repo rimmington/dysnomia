@@ -126,7 +126,6 @@ case "$1" in
             if [ -e @systemd_rundir@/system/disnix-$serviceName.service ]
             then
                 removeSystemdService @systemd_rundir@/system/disnix-$serviceName.service $2
-                systemctl --system daemon-reload
             fi
         elif [ "@job_template@" = "init.d" ]
         then
